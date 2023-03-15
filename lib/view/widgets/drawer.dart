@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:link_task/data/models/articles.dart';
@@ -45,12 +46,12 @@ class DrawerWidget extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  AppStrings.welcome,
+                                  AppStrings.welcome.tr(),
                                   style: getRegularStyle(
                                       textColor: AppColor.grey),
                                 ),
                                 Text(
-                                  AppStrings.name,
+                                  AppStrings.name.tr(),
                                   style: getSemiBoldStyle(
                                       textColor: AppColor.black,
                                       fontSize: 16.0),
@@ -60,7 +61,7 @@ class DrawerWidget extends StatelessWidget {
                       ],
                     )),
                 ListTileWidget(
-                  title: AppStrings.articles,
+                  title: AppStrings.articles.tr(),
                   onTap: () {
                     cubit.changeIndex(index: 0);
                     Navigator.pop(context);
@@ -68,28 +69,28 @@ class DrawerWidget extends StatelessWidget {
                   imgPath: ImagesManager.articles,
                 ),
                 ListTileWidget(
-                    title: AppStrings.liveChat,
+                    title: AppStrings.liveChat.tr(),
                     onTap: () {
                       cubit.changeIndex(index: 1);
                       Navigator.pop(context);
                     },
                     imgPath: ImagesManager.liveChat),
                 ListTileWidget(
-                    title: AppStrings.gallery,
+                    title: AppStrings.gallery.tr(),
                     onTap: () {
                       cubit.changeIndex(index: 2);
                       Navigator.pop(context);
                     },
                     imgPath: ImagesManager.gallery),
                 ListTileWidget(
-                    title: AppStrings.wishList,
+                    title: AppStrings.wishList.tr(),
                     onTap: () {
                       cubit.changeIndex(index: 3);
                       Navigator.pop(context);
                     },
                     imgPath: ImagesManager.wishList),
                 ListTileWidget(
-                    title: AppStrings.exploreOnlineNews,
+                    title: AppStrings.exploreOnlineNews.tr(),
                     onTap: () {
                       cubit.changeIndex(index: 4);
                       Navigator.pop(context);

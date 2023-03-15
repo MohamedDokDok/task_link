@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:link_task/shared/app_color/app_color.dart';
 import 'package:link_task/shared/app_values.dart';
@@ -9,13 +7,21 @@ class MyTextFormFiled extends StatelessWidget {
   final String hintLabel;
   final String emptyFiledTitle;
   final Function(String) onChange;
+  final Color enabledBorderColor;
+  final Color focusedBorderColor;
+  final Color errorBorderColor;
+  final Color cursorColor;
 
-  const MyTextFormFiled({
+  MyTextFormFiled({
     Key? key,
     required this.controller,
     required this.hintLabel,
     required this.emptyFiledTitle,
     required this.onChange,
+    this.enabledBorderColor = AppColor.grey,
+    this.focusedBorderColor = AppColor.primary,
+    this.errorBorderColor = AppColor.error,
+    this.cursorColor = AppColor.primary,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -31,33 +37,29 @@ class MyTextFormFiled extends StatelessWidget {
           return null;
         }
       },
-      cursorColor: AppColor.primary,
+      cursorColor: cursorColor,
       keyboardType: TextInputType.name,
-      style:  TextStyle(
+      style: const TextStyle(
         color: AppColor.black,
       ),
       decoration: InputDecoration(
         hintText: hintLabel,
-        hintStyle: TextStyle(
-            color: AppColor.grey,
+        hintStyle: const TextStyle(
+          color: AppColor.black,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppSize.s12),
           borderSide: BorderSide(
-            color: AppColor.grey,
+            color: enabledBorderColor,
           ),
         ),
-
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppSize.s12),
-          borderSide: const BorderSide(
-            color: AppColor.primary,
+          borderSide: BorderSide(
+            color: focusedBorderColor,
           ),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppSize.s12),
           borderSide: BorderSide(
-            color: AppColor.error,
+            color: errorBorderColor,
           ),
         ),
       ),

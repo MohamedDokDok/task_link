@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:link_task/shared/app_color/app_color.dart';
 import 'package:link_task/shared/strings.dart';
@@ -13,7 +14,7 @@ class GalleryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Text(
-          AppStrings.galleryError,
+          AppStrings.galleryError.tr(),
           style: getSemiBoldStyle(textColor: AppColor.black),
         ),
     );

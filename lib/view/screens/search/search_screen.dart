@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:link_task/data/models/articles.dart';
 import 'package:link_task/shared/app_color/app_color.dart';
 import 'package:link_task/shared/app_fonts.dart';
 import 'package:link_task/shared/app_values.dart';
@@ -62,8 +62,8 @@ class SearchScreen extends StatelessWidget {
               Expanded(
                 child: MyTextFormFiled(
                   controller: txtSearchController,
-                  hintLabel: AppStrings.search,
-                  emptyFiledTitle: AppStrings.searchError,
+                  hintLabel: AppStrings.search.tr(),
+                  emptyFiledTitle: AppStrings.searchError.tr(),
                   onChange: (String? txtSearch) {
                     if (txtSearch!.length > 2) {
                       cubit.getArticlesSearched(
@@ -82,7 +82,7 @@ class SearchScreen extends StatelessWidget {
               child: AnimatedTextKit(
                 animatedTexts: [
                   WavyAnimatedText(
-                    AppStrings.searchNow,
+                    AppStrings.searchNow.tr(),
                     textStyle: getBoldStyle(
                         textColor: AppColor.black,
                         fontSize: FontsSizeManager.s18),
@@ -108,8 +108,8 @@ class SearchScreen extends StatelessWidget {
                         ),
                     itemCount: cubit.articlesSearched.length))
           else
-            Padding(
-              padding: const EdgeInsets.all(AppPadding.p16),
+            const Padding(
+              padding: EdgeInsets.all(AppPadding.p16),
               child: LinearProgressIndicator(backgroundColor: AppColor.white),
             )
         ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared/app_color/app_color.dart';
@@ -13,7 +14,7 @@ class ExploreOnlineNewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Text(
-          AppStrings.liveChatError,
+          AppStrings.liveChatError.tr(),
           style: getSemiBoldStyle(textColor: AppColor.black),
         ),
     );

@@ -5,8 +5,7 @@ import 'package:link_task/view/widgets/card_view.dart';
 import 'package:link_task/view_model/articles_cubit/articles_cubit.dart';
 
 import '../../../data/models/articles.dart';
-import '../../../shared/strings.dart';
-import '../../widgets/button.dart';
+
 
 class ArticlesScreen extends StatefulWidget {
   const ArticlesScreen({Key? key}) : super(key: key);

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:link_task/shared/app_color/app_color.dart';
+import 'package:link_task/shared/app_values.dart';
 import 'package:link_task/shared/styles/montserrat_style.dart';
+import 'package:link_task/view/widgets/text_form_filed.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-
   final String title;
-  final Function()? onPressIcon;
-  final IconData? icon;
+  final List<Widget>? actionsWidgets;
 
-  const AppBarWidget({Key? key, required this.title, this.onPressIcon, this.icon}) : super(key: key);
+  AppBarWidget({Key? key, required this.title, this.actionsWidgets}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +21,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       centerTitle: false,
-      actions: [
-        IconButton(
-          onPressed: onPressIcon,
-          icon: Icon(
-            icon,
-            color: AppColor.white,
-          ),
-        ),
-      ],
+      actions: actionsWidgets,
     );
   }
 

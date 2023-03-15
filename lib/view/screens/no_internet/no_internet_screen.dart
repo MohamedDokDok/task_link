@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:link_task/view/widgets/button.dart';
@@ -28,11 +29,11 @@ class NoInternetBody extends StatelessWidget {
                 ),
                 AnimatedTextKit(
                   animatedTexts: [
-                    RotateAnimatedText(AppStrings.noInternet,
+                    RotateAnimatedText(AppStrings.noInternet.tr(),
                         textStyle: getBoldStyle(
                             textColor: AppColor.error,
                             fontSize: FontsSizeManager.s16)),
-                    RotateAnimatedText(AppStrings.checkInternet,
+                    RotateAnimatedText(AppStrings.checkInternet.tr(),
                         textStyle: getMediumStyle(
                             textColor: AppColor.black,
                             fontSize: FontsSizeManager.s14)),

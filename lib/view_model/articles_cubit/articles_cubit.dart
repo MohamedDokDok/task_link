@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_offline/flutter_offline.dart';
@@ -94,15 +95,15 @@ class ArticlesCubit extends Cubit<ArticlesState> {
 
   String titleAppBart() {
     if (index == 0) {
-      return AppStrings.articles;
+      return AppStrings.articles.tr();
     } else if (index == 1) {
-      return AppStrings.liveChat;
+      return AppStrings.liveChat.tr();
     } else if (index == 2) {
-      return AppStrings.gallery;
+      return AppStrings.gallery.tr();
     } else if (index == 3) {
-      return AppStrings.wishList;
+      return AppStrings.wishList.tr();
     } else {
-      return AppStrings.exploreOnlineNews;
+      return AppStrings.exploreOnlineNews.tr();
     }
   }
 

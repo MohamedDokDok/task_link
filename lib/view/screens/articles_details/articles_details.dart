@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:link_task/view/widgets/app_bar.dart';
 import 'package:link_task/view/widgets/button.dart';
@@ -33,7 +34,7 @@ class ArticlesDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(
+      appBar:  AppBarWidget(
         title: "articles details",
       ),
       body: Padding(
@@ -54,7 +55,7 @@ class ArticlesDetailsScreen extends StatelessWidget {
               ),
             ),
             DefaultButtonWidget(
-              label: AppStrings.openWebSite,
+              label: AppStrings.openWebSite.tr(),
               onPressed: () async {
                 print(articleUrl);
                 final Uri _url = Uri.parse(articleUrl);
@@ -74,7 +75,7 @@ class ArticlesDetailsScreen extends StatelessWidget {
       await launchUrl(url, mode: LaunchMode.externalApplication);
     } else {
       showToast(
-        text: AppStrings.canNotOpenUrl,
+        text: AppStrings.canNotOpenUrl.tr(),
         state: ToastStates.ERROR,
       );
     }

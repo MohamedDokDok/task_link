@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:link_task/shared/app_fonts.dart';
@@ -62,7 +63,7 @@ class CardView extends StatelessWidget {
                       children: [
                         const Icon(Icons.error),
                         Text(
-                          AppStrings.imageGetFailed,
+                          AppStrings.imageGetFailed.tr(),
                           style: getBoldStyle(
                               textColor: AppColor.error, fontSize: FontsSizeManager.s16),
                         )

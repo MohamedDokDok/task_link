@@ -27,14 +27,21 @@ class HomeLayoutScreen extends StatelessWidget {
           drawer: const DrawerWidget(),
           appBar: AppBarWidget(
             title: cubit.titleAppBart(),
-            icon: Icons.search,
-            onPressIcon: () {
-              Navigator.pushNamed(
-                context,
-                AppRoutes.searchRoute,
-              );
-              ArticlesCubit.get(context).articlesSearched.clear();
-            },
+            actionsWidgets: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    AppRoutes.searchRoute,
+                  );
+                  ArticlesCubit.get(context).articlesSearched.clear();
+                },
+                icon: const Icon(
+                  Icons.search,
+                  color: AppColor.white,
+                ),
+              )
+            ],
           ),
           body: cubit.checkInternet(
             widget: ArticlesCubit.get(context)

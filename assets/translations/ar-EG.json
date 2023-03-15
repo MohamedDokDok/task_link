@@ -1,0 +1,22 @@
+{
+  "noRouteFound" : "No Route Found",
+  "articles" : "المقالات",
+  "liveChat" : "دردشه حيه",
+  "gallery" : "الصور",
+  "wishList" : "الشكليات",
+  "exploreOnlineNews" : "Explore Online News",
+  "articlesDetails" : "ARTICLE DETAILS",
+  "name" : "Tony Roshdy",
+  "imageGetFailed" : "Can not load Image",
+  "liveChatError" : "Sorry, Service is not available",
+  "galleryError" : "here is no item available to display",
+  "openWebSite" : "OPEN WEBSITE",
+  "search" : "Search",
+  "searchError" : "Write thing to search",
+  "canNotOpenUrl" : "Can not open web site",
+  "searchNow" : "Search Now",
+  "noInternet" : "NO INTERNET CONNECTION",
+  "checkInternet" : "Check Internet",
+  "fetchDataAgain" : "Fetch Data Again"
+
+}

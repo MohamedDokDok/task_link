@@ -16,6 +16,8 @@ ThemeData getLightTheme() {
       shadowColor: AppColor.grey,
       elevation: AppSize.s4,
     ),
+
+    // App Bar Theme
     appBarTheme: AppBarTheme(
       centerTitle: true,
       color: AppColor.primary,
@@ -26,24 +28,8 @@ ThemeData getLightTheme() {
         textColor: AppColor.white,
       ),
     ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        textStyle: getRegularStyle(
-          textColor: AppColor.white,
-          fontSize: FontsSizeManager.s17,
-        ),
-        primary: AppColor.primary,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSize.s12),
-        ),
-      ),
-    ),
-    buttonTheme: ButtonThemeData(
-      shape: const StadiumBorder(),
-      disabledColor: AppColor.grey1,
-      buttonColor: AppColor.primary,
-      splashColor: AppColor.lightPrimary,
-    ),
+
+    //Text Theme
     textTheme: TextTheme(
       displayLarge: getLightStyle(
         textColor: AppColor.white,
@@ -64,6 +50,8 @@ ThemeData getLightTheme() {
         textColor: AppColor.grey,
       ),
     ),
+
+    //TextFormField Theme
     inputDecorationTheme: InputDecorationTheme(
       // content padding
       contentPadding: const EdgeInsets.all(AppPadding.p8),
@@ -81,23 +69,23 @@ ThemeData getLightTheme() {
       ),
 
       // enabled border style
-      enabledBorder: const OutlineInputBorder(
+      enabledBorder:  OutlineInputBorder(
         borderSide: BorderSide(
-          color: AppColor.primary,
+          color: AppColor.grey2,
           width: AppSize.s1_5,
         ),
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(AppSize.s8),
         ),
       ),
 
       // focused border style
-      focusedBorder: OutlineInputBorder(
+      focusedBorder: const OutlineInputBorder(
         borderSide: BorderSide(
-          color: AppColor.grey,
+          color: AppColor.primary,
           width: AppSize.s1_5,
         ),
-        borderRadius: const BorderRadius.all(
+        borderRadius: BorderRadius.all(
           Radius.circular(AppSize.s8),
         ),
       ),
@@ -113,17 +101,18 @@ ThemeData getLightTheme() {
         ),
       ),
       // focused border style
-      focusedErrorBorder: const OutlineInputBorder(
+      focusedErrorBorder:  OutlineInputBorder(
         borderSide: BorderSide(
-          color: AppColor.primary,
+          color: AppColor.error,
           width: AppSize.s1_5,
         ),
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(AppSize.s8),
         ),
       ),
     ),
-    indicatorColor: AppColor.primary,
+
+    //ProgressIndicator Theme
     progressIndicatorTheme: ProgressIndicatorThemeData(
         color: AppColor.primary, refreshBackgroundColor: AppColor.lightPrimary),
   );
